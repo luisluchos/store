@@ -1,11 +1,14 @@
 import { lightTheme } from '@/themes'
 
-import { ThemeProvider } from '@mui/material'
+import { ThemeProvider, Typography } from '@mui/material'
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Holaa</h1>
+    <main>
+      <Typography variant='h1' component='h1'>
+        Store
+      </Typography>
+      <Typography variant='h2'>All products</Typography>
     </main>
   )
 }
