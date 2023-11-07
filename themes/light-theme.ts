@@ -56,6 +56,7 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
+          
           textTransform: 'none',
           boxShadow: 'none',
           borderRadius: 10,

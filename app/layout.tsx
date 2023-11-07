@@ -6,7 +6,9 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
-import { lightTheme } from '@/themes/light-theme'
+import { Navbar } from './components/ui'
+import { lightTheme } from '../themes'
+import { ThemeProvider } from '@mui/material/styles';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,8 +21,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <meta name='og:keywords' content='Store' />
           <meta name='og:title' content='Store' />
         </head>
-        <body className={inter.className}>{children}</body>
-      </html>
+
+        <ThemeProvider theme={lightTheme}>
+          <body className={inter.className}>
+            <Navbar />
+            <div className='mt-16'>
+
+              {children}
+            </div>
+
+          </body>
+        </ThemeProvider>
+      </html >
     </>
   )
 }
